@@ -1,0 +1,135 @@
+{
+  "theme": "light",
+  "archetype": "Modern High-Contrast & Soft Accent",
+  "colors": {
+    "primary": "#000000",
+    "primary_foreground": "#FFFFFF",
+    "accent": "#FF3F6C",
+    "accent_foreground": "#FFFFFF",
+    "background": "#FFFFFF",
+    "surface": "#F9FAFB",
+    "border": "#E5E7EB",
+    "text_main": "#111827",
+    "text_muted": "#6B7280",
+    "success": "#10B981",
+    "warning": "#F59E0B",
+    "error": "#EF4444"
+  },
+  "typography": {
+    "font_family_heading": "Outfit, sans-serif",
+    "font_family_body": "Poppins, sans-serif",
+    "h1": "text-4xl sm:text-5xl font-black tracking-tight text-black",
+    "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-black",
+    "h3": "text-xl sm:text-2xl font-semibold text-black",
+    "body": "text-base font-normal text-gray-800 leading-relaxed",
+    "small": "text-sm font-medium text-gray-500",
+    "button": "text-sm sm:text-base font-bold tracking-wide uppercase"
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_gap": "py-12 md:py-20",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6",
+    "product_grid": "grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6",
+    "card_radius": "rounded-none md:rounded-sm",
+    "button_radius": "rounded-sm"
+  },
+  "components": {
+    "header": "Sticky header with backdrop-blur-xl, white background at 90% opacity, crisp border-b. Contains logo, search, wishlist icon, and cart icon.",
+    "mega_menu": "Full-width dropdown with grid layout for categories (Men, Women, Combos, New Arrivals, Offers).",
+    "hero_banner": "Full-bleed slider, aggressive typography overlay. Promo text 'BUY 2 GET 1 FREE' with 'Shop Now' CTA in accent pink #FF3F6C. Max height 80vh on mobile.",
+    "product_card": "Minimalist layout. Image takes 80% of height. On hover: show second image + quick 'Add to Cart' button slides up. Price in bold, original price strikethrough. Discount badge top-left in accent pink.",
+    "cart_drawer": "Slide-out drawer from right. Shows items, size selectors, subtotal, 'You saved X amount' in green, and large Checkout button.",
+    "filters": "Sidebar on desktop, slide-up bottom sheet on mobile (size, price, category).",
+    "buttons": "Primary: bg-[#FF3F6C] text-white hover:bg-black hover:text-white transition-colors duration-300. Secondary: bg-black text-white. Outline: border-2 border-black text-black hover:bg-black hover:text-white."
+  },
+  "motion_and_interactions": {
+    "hover_state": "Product images scale up by 1.05x on hover (transition-transform duration-500 ease-out).",
+    "button_hover": "-translate-y-0.5 shadow-lg",
+    "page_transition": "Fade in on load"
+  },
+  "icons": "lucide-react",
+  "media": {
+    "hero_banners": [
+      {
+        "url": "https://images.unsplash.com/photo-1604942926673-48ee8a893c34?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwyfHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Couple wearing colorful casual clothes (Hero Banner 1 - BUY 2 GET 1 FREE)"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1648249664646-c58cd3954f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "Couple fashion standing (Hero Banner 2 - New Arrivals)"
+      }
+    ],
+    "categories": [
+      {
+        "name": "Men's T-Shirts",
+        "url": "https://images.unsplash.com/photo-1712917125122-3d5b6527bf47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwyfHxtZW4lMjB0LXNoaXJ0JTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Women's Tops",
+        "url": "https://images.unsplash.com/photo-1770918655026-c2204eb65ae9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwyfHx3b21lbiUyMGNhc3VhbCUyMHRvcCUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3Nzc4OTY2NzZ8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Combos",
+        "url": "https://images.unsplash.com/photo-1697748403348-260ec3169d87?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "name": "Hoodies & Jackets",
+        "url": "https://images.unsplash.com/photo-1691132615844-b013a05b51e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxob29kaWUlMjBwbGFpbiUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc3ODk2NzExfDA&ixlib=rb-4.1.0&q=85"
+      }
+    ],
+    "products": [
+      {
+        "id": "p1",
+        "name": "Oversized Drop Shoulder T-Shirt",
+        "category": "T-Shirts",
+        "price": "₹699",
+        "original_price": "₹1299",
+        "discount": "46% OFF",
+        "url": "https://images.unsplash.com/photo-1654857260001-c4bcddda4942?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxtZW4lMjB0LXNoaXJ0JTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
+        "hover_url": "https://images.unsplash.com/photo-1773848091543-c6c7e8ea9781?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHw0fHxtZW4lMjB0LXNoaXJ0JTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "p2",
+        "name": "Women Casual White Knit",
+        "category": "Tops",
+        "price": "₹899",
+        "original_price": "₹1599",
+        "discount": "43% OFF",
+        "url": "https://images.unsplash.com/photo-1621198059871-0d5f9b449233?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHwzfHx3b21lbiUyMGNhc3VhbCUyMHRvcCUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3Nzc4OTY2NzZ8MA&ixlib=rb-4.1.0&q=85",
+        "hover_url": "https://images.unsplash.com/photo-1619619742361-b8998a8e2dc0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzl8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNhc3VhbCUyMHRvcCUyMHdoaXRlJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3Nzc4OTY2NzZ8MA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "p3",
+        "name": "Classic Brown Hoodie",
+        "category": "Hoodies",
+        "price": "₹1299",
+        "original_price": "₹2499",
+        "discount": "48% OFF",
+        "url": "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxob29kaWUlMjBwbGFpbiUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc3ODk2NzExfDA&ixlib=rb-4.1.0&q=85",
+        "hover_url": "https://images.unsplash.com/photo-1624804859134-c57fd6c5effa?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxob29kaWUlMjBwbGFpbiUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc3ODk2NzExfDA&ixlib=rb-4.1.0&q=85"
+      },
+      {
+        "id": "p4",
+        "name": "Premium Cotton Joggers",
+        "category": "Joggers",
+        "price": "₹799",
+        "original_price": "₹1499",
+        "discount": "46% OFF",
+        "url": "https://images.unsplash.com/photo-1771502244768-a9671a764b2e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBqb2dnZXJzJTIwcGxhaW4lMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjcxMXww&ixlib=rb-4.1.0&q=85",
+        "hover_url": "https://images.unsplash.com/photo-1771502244768-a9671a764b2e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxtZW4lMjBqb2dnZXJzJTIwcGxhaW4lMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjcxMXww&ixlib=rb-4.1.0&q=85"
+      }
+    ]
+  },
+  "testing": {
+    "data_testid_rules": "All interactive elements (buttons, links, inputs) MUST have kebab-case data-testid attributes based on their role (e.g., data-testid='add-to-cart-button')."
+  },
+  "instructions_to_main_agent": [
+    "Use Shadcn UI for dropdowns, sheets (cart drawer), dialogs, and toasts.",
+    "Build the core layout using standard HTML+Tailwind for maximum flexibility, specifically the product grids and hero sections.",
+    "Implement the 'hover-second-image' feature on the product cards by swapping the image src or toggling opacity on hover.",
+    "Sticky header should have backdrop-blur and a clear CTA. Do not hide desktop menu in a hamburger.",
+    "Ensure primary buttons use the accent color #FF3F6C.",
+    "Typography: Apply Outfit for headings and Poppins for body text.",
+    "Implement Razorpay checkout flow mock (button -> success toast)."
+  ]
+}
