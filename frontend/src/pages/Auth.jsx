@@ -32,7 +32,7 @@ function AuthPanel({ mode }) {
         <div className="min-h-[70vh] flex items-center justify-center py-12 px-4">
             <div className="w-full max-w-md">
                 <h1 className="text-4xl font-black mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>
-                    {mode === "login" ? "Welcome back" : "Join StyleVibe"}
+                    {mode === "login" ? "Welcome back" : "Join Nexbrand"}
                 </h1>
                 <p className="text-sm text-gray-500 mb-8">
                     {mode === "login" ? "Sign in to continue your style journey" : "Create an account to start shopping"}
@@ -75,7 +75,7 @@ function AuthPanel({ mode }) {
                 </form>
                 <p className="text-sm text-center mt-6 text-gray-600">
                     {mode === "login" ? (
-                        <>New to StyleVibe? <Link to="/register" className="font-bold text-black underline" data-testid="auth-switch">Create an account</Link></>
+                        <>New to Nexbrand? <Link to="/register" className="font-bold text-black underline" data-testid="auth-switch">Create an account</Link></>
                     ) : (
                         <>Already have an account? <Link to="/login" className="font-bold text-black underline" data-testid="auth-switch">Sign in</Link></>
                     )}

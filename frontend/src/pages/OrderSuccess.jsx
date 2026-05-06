@@ -8,7 +8,7 @@ export default function OrderSuccess() {
         <div className="max-w-2xl mx-auto px-4 py-20 text-center" data-testid="order-success">
             <CheckCircle2 className="w-20 h-20 text-green-500 mx-auto mb-6" />
             <h1 className="text-4xl font-black" style={{ fontFamily: "Outfit, sans-serif" }}>Order Placed!</h1>
-            <p className="text-gray-600 mt-3">Thanks for shopping with StyleVibe. You'll get a confirmation shortly.</p>
+            <p className="text-gray-600 mt-3">Thanks for shopping with Nexbrand. You'll get a confirmation shortly.</p>
             {order && (
                 <div className="mt-8 border border-gray-200 p-6 text-left">
                     <div className="flex justify-between text-sm mb-2"><span className="text-gray-500">Order ID</span><span className="font-semibold">{order.id.slice(0, 12)}…</span></div>

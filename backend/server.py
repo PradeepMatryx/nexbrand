@@ -22,7 +22,7 @@ DB_NAME = os.environ["DB_NAME"]
 JWT_SECRET = os.environ["JWT_SECRET"]
 JWT_ALGORITHM = "HS256"
 FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:3000")
-ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "admin@stylevibe.in")
+ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "admin@nexbrand.com")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "Admin@12345")
 RAZORPAY_KEY_ID = os.environ.get("RAZORPAY_KEY_ID", "")
 RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET", "")
@@ -30,11 +30,11 @@ RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET", "")
 client = AsyncIOMotorClient(MONGO_URL)
 db = client[DB_NAME]
 
-app = FastAPI(title="StyleVibe API")
+app = FastAPI(title="Nexbrand API")
 api = APIRouter(prefix="/api")
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("stylevibe")
+logger = logging.getLogger("nexbrand")
 
 
 # ---------- Helpers ----------
@@ -526,7 +526,7 @@ async def list_orders(user: dict = Depends(get_current_user)):
 
 @api.get("/")
 async def root():
-    return {"ok": True, "service": "StyleVibe API"}
+    return {"ok": True, "service": "Nexbrand API"}
 
 
 app.include_router(api)

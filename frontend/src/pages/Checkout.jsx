@@ -82,7 +82,7 @@ export default function Checkout() {
                         key: order.key_id,
                         amount: order.amount,
                         currency: "INR",
-                        name: "StyleVibe",
+                        name: "Nexbrand",
                         description: `Order for ${cart.length} item(s)`,
                         order_id: order.id,
                         prefill: { name: address.full_name, email: user.email, contact: address.phone },

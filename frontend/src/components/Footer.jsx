@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-2 md:grid-cols-5 gap-8">
                 <div className="col-span-2">
                     <div className="font-black text-3xl tracking-tighter mb-3" style={{ fontFamily: "Outfit, sans-serif" }}>
-                        style<span className="sv-accent-text">vibe</span>.
+                        nex<span className="sv-accent-text">brand</span>.com
                     </div>
                     <p className="text-sm text-white/70 leading-relaxed max-w-sm">
                         D2C fashion for the modern Indian wardrobe. Premium fabrics, conscious pricing, and drops that actually deliver.
@@ -48,7 +48,7 @@ export default function Footer() {
             </div>
             <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
-                    <p>© 2026 StyleVibe. All rights reserved.</p>
+                    <p>© 2026 Nexbrand. All rights reserved.</p>
                     <div className="flex items-center gap-3 text-[11px] uppercase tracking-widest">
                         <span className="border border-white/20 px-2 py-1 rounded">UPI</span>
                         <span className="border border-white/20 px-2 py-1 rounded">Visa</span>
