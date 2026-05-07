@@ -26,6 +26,8 @@ ADMIN_EMAIL = os.environ.get("ADMIN_EMAIL", "admin@nexbrand.com")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "Admin@12345")
 RAZORPAY_KEY_ID = os.environ.get("RAZORPAY_KEY_ID", "")
 RAZORPAY_KEY_SECRET = os.environ.get("RAZORPAY_KEY_SECRET", "")
+# "local" (http, no secure) or "prod" (https, cross-site cookies)
+COOKIE_MODE = os.environ.get("COOKIE_MODE", "prod").lower()
 
 client = AsyncIOMotorClient(MONGO_URL)
 db = client[DB_NAME]
@@ -267,10 +269,17 @@ async def startup():
 
 # ---------- Auth routes ----------
 def set_auth_cookie(response: Response, token: str):
-    response.set_cookie(
-        key="access_token", value=token, httponly=True,
-        secure=True, samesite="none", max_age=60 * 60 * 24 * 7, path="/",
-    )
+    if COOKIE_MODE == "local":
+        # http://localhost — browsers reject Secure/SameSite=None without https
+        response.set_cookie(
+            key="access_token", value=token, httponly=True,
+            secure=False, samesite="lax", max_age=60 * 60 * 24 * 7, path="/",
+        )
+    else:
+        response.set_cookie(
+            key="access_token", value=token, httponly=True,
+            secure=True, samesite="none", max_age=60 * 60 * 24 * 7, path="/",
+        )
 
 
 def clear_auth_cookie(response: Response):
