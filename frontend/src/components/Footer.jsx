@@ -5,8 +5,8 @@ export default function Footer() {
         <footer className="bg-black text-white mt-16" data-testid="footer">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-2 md:grid-cols-5 gap-8">
                 <div className="col-span-2">
-                    <div className="font-black text-3xl tracking-tighter mb-3" style={{ fontFamily: "Outfit, sans-serif" }}>
-                        nex<span className="sv-accent-text">brand</span>.com
+                    <div className="mb-4">
+                        <img src="/logo.jpg" alt="Nexbrand" className="h-12 w-auto rounded-sm" />
                     </div>
                     <p className="text-sm text-white/70 leading-relaxed max-w-sm">
                         D2C fashion for the modern Indian wardrobe. Premium fabrics, conscious pricing, and drops that actually deliver.

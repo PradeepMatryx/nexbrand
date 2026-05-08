@@ -49,8 +49,8 @@ export default function Header() {
                     >
                         <Menu className="w-6 h-6" />
                     </button>
-                    <Link to="/" className="font-black text-2xl tracking-tighter" data-testid="logo-link" style={{ fontFamily: "Outfit, sans-serif" }}>
-                        nex<span className="sv-accent-text">brand</span>.com
+                    <Link to="/" className="flex items-center" data-testid="logo-link" aria-label="Nexbrand home">
+                        <img src="/logo.jpg" alt="Nexbrand" className="h-9 sm:h-10 w-auto rounded-sm" />
                     </Link>
                 </div>
 
@@ -161,8 +161,8 @@ export default function Header() {
             {mobileOpen && (
                 <div className="fixed inset-0 z-50 md:hidden bg-white">
                     <div className="h-16 px-4 flex items-center justify-between border-b border-gray-200">
-                        <span className="font-black text-2xl tracking-tighter" style={{ fontFamily: "Outfit, sans-serif" }}>
-                            nex<span className="sv-accent-text">brand</span>.com
+                        <span className="flex items-center" aria-label="Nexbrand">
+                            <img src="/logo.jpg" alt="Nexbrand" className="h-9 w-auto rounded-sm" />
                         </span>
                         <button onClick={() => setMobileOpen(false)} data-testid="mobile-menu-close">
                             <X className="w-6 h-6" />

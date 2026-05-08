@@ -1,0 +1,17 @@
+{
+    "short_name": "Nexbrand",
+    "name": "Nexbrand — Fashion for Every Vibe",
+    "description": "Trendy t-shirts, joggers, shirts & combos. Buy 2 Get 1 Free.",
+    "icons": [
+        {
+            "src": "/logo.jpg",
+            "type": "image/jpeg",
+            "sizes": "1024x1024",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+}

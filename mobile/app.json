@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Nexbrand",
+    "slug": "nexbrand",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.jpg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.jpg",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nexbrand.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.jpg",
+        "backgroundColor": "#000000"
+      },
+      "package": "com.nexbrand.app"
+    },
+    "web": {
+      "favicon": "./assets/logo.jpg"
+    },
+    "extra": {
+      "apiUrl": "https://style-hub-1198.preview.emergentagent.com"
+    }
+  }
+}
