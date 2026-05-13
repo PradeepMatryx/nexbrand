@@ -7,77 +7,55 @@ import { ArrowRight, Truck, RefreshCw, ShieldCheck, Tag } from "lucide-react";
 
 const HERO_SLIDES = [
     {
-        tag: "Season Drop",
-        title: "BUY 2 GET 1 FREE",
-        sub: "On all Oversized Tees & Hoodies. This week only.",
-        cta: "Shop Combos",
+        image: "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/jg1u7x25_Individual%26BulkOrders.png",
+        bg: "#FFFFFF",
+        to: "/shop",
+        alt: "Individual & Bulk Orders — premium NEX apparel for every need",
+    },
+    {
+        image: "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/vh8i1jih_Corportae_orders.png",
+        bg: "#0A0A0A",
         to: "/category/combos",
-        image: "https://images.unsplash.com/photo-1604942926673-48ee8a893c34?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwyfHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
-    },
-    {
-        tag: "New Arrivals",
-        title: "FRESH OFF THE RACK",
-        sub: "Brand new fits. Built for every vibe.",
-        cta: "Shop New",
-        to: "/shop?tag=new",
-        image: "https://images.unsplash.com/photo-1648249664646-c58cd3954f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
-    },
-    {
-        tag: "Flat 50% Off",
-        title: "DRESS THE DEAL",
-        sub: "Bestsellers at half price. While stocks last.",
-        cta: "Shop Offers",
-        to: "/shop?tag=trending",
-        image: "https://images.unsplash.com/photo-1697748403348-260ec3169d87?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxjYXN1YWwlMjBmYXNoaW9uJTIwY291cGxlJTIwd2hpdGUlMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3Nzg5NjY3Nnww&ixlib=rb-4.1.0&q=85",
+        alt: "Corporate Orders — professional NEX apparel for teams",
     },
 ];
 
 function Hero() {
     const [i, setI] = useState(0);
     useEffect(() => {
-        const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDES.length), 5000);
+        const t = setInterval(() => setI((v) => (v + 1) % HERO_SLIDES.length), 6000);
         return () => clearInterval(t);
     }, []);
-    const s = HERO_SLIDES[i];
+
     return (
-        <section className="relative bg-gray-50 overflow-hidden" data-testid="hero-section">
-            <div className="relative h-[70vh] sm:h-[80vh] min-h-[480px] max-h-[720px]">
+        <section className="relative overflow-hidden" data-testid="hero-section">
+            <div className="relative h-[60vh] sm:h-[75vh] min-h-[420px] max-h-[760px]">
                 {HERO_SLIDES.map((slide, idx) => (
-                    <div
+                    <Link
                         key={idx}
-                        className="absolute inset-0 transition-opacity duration-[1200ms] ease-out"
-                        style={{ opacity: idx === i ? 1 : 0 }}
+                        to={slide.to}
+                        className="absolute inset-0 transition-opacity duration-[1000ms] ease-out"
+                        style={{ opacity: idx === i ? 1 : 0, backgroundColor: slide.bg, pointerEvents: idx === i ? "auto" : "none" }}
+                        data-testid={`hero-slide-${idx}`}
+                        aria-label={slide.alt}
                     >
-                        <img src={slide.image} alt="" className="absolute inset-0 w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-                    </div>
+                        <img
+                            src={slide.image}
+                            alt={slide.alt}
+                            className="w-full h-full object-contain"
+                            loading={idx === 0 ? "eager" : "lazy"}
+                        />
+                    </Link>
                 ))}
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-                    <div className="max-w-xl text-white fade-up" key={i}>
-                        <span className="inline-block text-xs font-bold uppercase tracking-widest sv-accent-bg px-3 py-1 rounded-sm mb-5">
-                            {s.tag}
-                        </span>
-                        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tighter leading-none" style={{ fontFamily: "Outfit, sans-serif" }}>
-                            {s.title}
-                        </h1>
-                        <p className="mt-5 text-base sm:text-lg text-white/90 max-w-md">{s.sub}</p>
-                        <Link
-                            to={s.to}
-                            className="mt-8 inline-flex items-center gap-2 bg-white text-black font-bold uppercase tracking-widest text-xs px-7 py-4 hover:sv-accent-bg hover:text-white transition-colors"
-                            data-testid="hero-cta"
-                        >
-                            {s.cta} <ArrowRight className="w-4 h-4" />
-                        </Link>
-                    </div>
-                </div>
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex gap-2">
                     {HERO_SLIDES.map((_, idx) => (
                         <button
                             key={idx}
                             onClick={() => setI(idx)}
                             aria-label={`Slide ${idx + 1}`}
                             data-testid={`hero-dot-${idx}`}
-                            className={`h-1 rounded-full transition-all ${idx === i ? "w-10 bg-white" : "w-5 bg-white/50"}`}
+                            className={`h-1.5 rounded-full transition-all ${idx === i ? "w-10 sv-accent-bg" : "w-5 bg-black/30"}`}
                         />
                     ))}
                 </div>
