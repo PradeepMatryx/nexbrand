@@ -145,6 +145,14 @@ _NEX_BLUE_FLAT = "https://customer-assets.emergentagent.com/job_style-hub-1198/a
 _NEX_NAVY_FLAT = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/7u616d6f_navybluecolor.png"
 _NEX_CATALOG_1 = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/5k7ba6th_nex_catalog_1.png"
 _NEX_CATALOG_2 = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/mf3t5fct_nex_catalog_2.png"
+# Women collection
+_NEX_WOMEN_COLLAGE = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/fvibz85c_female_nex_1.png"
+_NEX_WOMEN_BLACK = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/ioortk1f_female_nex_2.png"
+_NEX_WOMEN_WHITE = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/gcvamf4l_female_nex_3.png"
+_NEX_WOMEN_NAVY = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/ka04hqql_female_nex_4.png"
+_NEX_WOMEN_GREY = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/k6onl4q1_female_nex_5.png"
+# Mixed-gender banner (used for combo packs)
+_NEX_CORPORATE_BANNER = "https://customer-assets.emergentagent.com/job_style-hub-1198/artifacts/vh8i1jih_Corportae_orders.png"
 
 _POLO_SIZES = ["S", "M", "L", "XL", "XXL"]
 _POLO_DESC = (
@@ -184,16 +192,37 @@ SEED_PRODUCTS = [
      "image": _NEX_CATALOG_2, "hover_image": _NEX_CATALOG_1,
      "description": _POLO_DESC,
      "rating": 4.4, "reviews": 118, "badge": "", "tags": ["polo"]},
-    {"name": "NEX 4-Polo Starter Pack", "category": "combos", "gender": "men",
+    {"name": "NEX 4-Polo His & Hers Starter Pack", "category": "combos", "gender": "unisex",
      "price": 2999, "original_price": 5996, "sizes": _POLO_SIZES,
-     "image": _NEX_CATALOG_1, "hover_image": _NEX_CATALOG_2,
-     "description": "Pick any 4 NEX polos from the full color range. Save 50% versus single-piece pricing.",
+     "image": _NEX_CORPORATE_BANNER, "hover_image": _NEX_WOMEN_COLLAGE,
+     "description": "Mix and match any 4 NEX polos across men's and women's fits. Built for couples, teams or pairing up his & her workwear.",
      "rating": 4.8, "reviews": 421, "badge": "Save ₹2997", "tags": ["trending", "combo"]},
-    {"name": "NEX 8-Color Master Bundle", "category": "combos", "gender": "men",
+    {"name": "NEX 8-Color Master Bundle — His & Hers", "category": "combos", "gender": "unisex",
      "price": 5499, "original_price": 11992, "sizes": _POLO_SIZES,
-     "image": _NEX_CATALOG_2, "hover_image": _NEX_CATALOG_1,
-     "description": "Every single NEX polo color in your size — Black, White, Navy, Royal Blue, Cream, Grey, Olive and Beige. The full wardrobe drop.",
+     "image": _NEX_WOMEN_COLLAGE, "hover_image": _NEX_CATALOG_1,
+     "description": "Every NEX polo color across men's and women's fits — Black, White, Navy, Royal Blue, Cream, Grey, Olive and Beige. The full wardrobe drop for couples and teams.",
      "rating": 4.9, "reviews": 287, "badge": "Save ₹6493", "tags": ["trending", "combo"]},
+    # ----- Women's Collection -----
+    {"name": "NEX Women's Signature Polo — Jet Black", "category": "polos", "gender": "women",
+     "price": 899, "original_price": 1499, "sizes": ["XS", "S", "M", "L", "XL"],
+     "image": _NEX_WOMEN_BLACK, "hover_image": _NEX_WOMEN_COLLAGE,
+     "description": _POLO_DESC + " Tailored for a flattering feminine silhouette.",
+     "rating": 4.7, "reviews": 156, "badge": "Bestseller", "tags": ["trending", "polo", "women"]},
+    {"name": "NEX Women's Classic Polo — Pure White", "category": "polos", "gender": "women",
+     "price": 899, "original_price": 1499, "sizes": ["XS", "S", "M", "L", "XL"],
+     "image": _NEX_WOMEN_WHITE, "hover_image": _NEX_WOMEN_COLLAGE,
+     "description": _POLO_DESC + " Tailored for a flattering feminine silhouette.",
+     "rating": 4.6, "reviews": 134, "badge": "New", "tags": ["new", "polo", "women"]},
+    {"name": "NEX Women's Sport Polo — Navy Blue", "category": "polos", "gender": "women",
+     "price": 899, "original_price": 1499, "sizes": ["XS", "S", "M", "L", "XL"],
+     "image": _NEX_WOMEN_NAVY, "hover_image": _NEX_WOMEN_COLLAGE,
+     "description": _POLO_DESC + " Tailored for a flattering feminine silhouette.",
+     "rating": 4.5, "reviews": 98, "badge": "New", "tags": ["new", "polo", "women"]},
+    {"name": "NEX Women's Everyday Polo — Heather Grey", "category": "polos", "gender": "women",
+     "price": 899, "original_price": 1499, "sizes": ["XS", "S", "M", "L", "XL"],
+     "image": _NEX_WOMEN_GREY, "hover_image": _NEX_WOMEN_COLLAGE,
+     "description": _POLO_DESC + " Tailored for a flattering feminine silhouette.",
+     "rating": 4.4, "reviews": 87, "badge": "", "tags": ["polo", "women"]},
 ]
 
 
@@ -339,16 +368,16 @@ async def categories():
     return [
         {"slug": "polos", "name": "All Polos", "to": "/category/polos",
          "image": _NEX_POLO_BLACK_1},
-        {"slug": "black", "name": "Black", "to": "/shop?q=Black",
+        {"slug": "men", "name": "Men", "to": "/shop?gender=men",
          "image": _NEX_POLO_BLACK_2},
+        {"slug": "women", "name": "Women", "to": "/shop?gender=women",
+         "image": _NEX_WOMEN_BLACK},
+        {"slug": "black", "name": "Black", "to": "/shop?q=Black",
+         "image": _NEX_POLO_BLACK_1},
         {"slug": "white", "name": "White", "to": "/shop?q=White",
          "image": _NEX_POLO_WHITE},
         {"slug": "navy", "name": "Navy", "to": "/shop?q=Navy",
          "image": _NEX_POLO_NAVY},
-        {"slug": "cream", "name": "Cream", "to": "/shop?q=Cream",
-         "image": _NEX_POLO_CREAM},
-        {"slug": "combos", "name": "Combos", "to": "/category/combos",
-         "image": _NEX_CATALOG_1},
     ]
 
 
