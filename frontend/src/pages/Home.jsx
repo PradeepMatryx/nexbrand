@@ -125,7 +125,7 @@ function Categories({ categories }) {
                 {categories.map((c) => (
                     <Link
                         key={c.slug}
-                        to={`/category/${c.slug}`}
+                        to={c.to || `/category/${c.slug}`}
                         className="group text-center"
                         data-testid={`category-${c.slug}`}
                     >
